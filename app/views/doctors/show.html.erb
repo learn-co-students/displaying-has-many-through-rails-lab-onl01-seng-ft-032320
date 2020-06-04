@@ -1,0 +1,4 @@
+<%= @doctor.appointments.map do |a| %>
+    <h1><%= a.appointment_datetime.strftime("%B %d, %Y at %H:%M") %></h1>
+    <h2><%= link_to a.patient.name, patient_path(a.patient)  %>
+<% end %>
